@@ -1,0 +1,55 @@
+html,body{
+	margin:0;
+	padding:0;
+	font-family:Open Sans;
+}
+#intro{
+	height:50%;
+	width:100%;
+	position:absolute;
+}
+#photo{
+	background:url('ancst.jpg') no-repeat center center;
+	box-shadow:0 0 1px rgba(200,200,200,0.5);
+	border-radius:40px;
+	height:155px;
+	width:150px;
+	margin:15% auto 0;
+}
+
+#name{
+	text-align:center;
+	font-weight:100;
+}
+nav ul{	
+	padding:0;
+	margin:0;
+}
+
+a:hover {
+    color: #3399FF;
+}
+
+nav ul li, nav ul li a{
+	display:inline-block;
+	min-width:90px;
+	list-style:none;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:200;
+	color:#989898;
+}
+nav{
+	margin:auto;
+	text-align:center;
+}
+@keyframes drop
+{
+from {margin:-20% auto 0;}
+to {margin:20% auto 0;}
+}
+@-webkit-keyframes drop
+{
+from {margin:-20% auto 0;}
+to {margin:20% auto 0;}
+}
