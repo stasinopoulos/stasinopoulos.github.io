@@ -11,7 +11,8 @@ html,body {
 }
 
 #photo {
-	background:url('../images/ancst.jpg') no-repeat center center;
+	background: url('https://avatars3.githubusercontent.com/u/5289251?s=460') no-repeat center;
+	background-size: 174px 165px;
 	box-shadow:0 0 1px rgba(200,200,200,0.5);
 	border-radius:50px;
 	height:155px;
