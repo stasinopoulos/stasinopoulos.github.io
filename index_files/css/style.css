@@ -4,32 +4,27 @@ html,body {
 	font-family:Open Sans;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
+  margin-left: 100%;
+  font-size: 14px;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 60px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 10;
 }
 
 .dropdown-content a {
+  border-radius: 60px;
   color: black;
+  padding: 1px 10px;
   text-decoration: none;
-  display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
-
+.dropdown-content a:hover {background-color: #989898;}
 .dropdown:hover .dropdown-content {display: block;}
-
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-#intro {
-	height:50%;
-	width:100%;
-	position:absolute;
-}
 
 #photo {
 	background: url('https://avatars3.githubusercontent.com/u/5289251?s=460') no-repeat center;
@@ -59,7 +54,7 @@ nav ul {
 }
 
 a:hover {
-    color:#3cc88c;
+    color:#c83c3c;
 }
 
 nav ul li, nav ul li a {
