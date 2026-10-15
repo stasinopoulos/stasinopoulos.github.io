@@ -1,85 +1,315 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Anastasios Stasinopoulos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="index_files/css/style.css" media="screen">
-    <link rel="stylesheet" href="index_files/css/css.css" type="text/css">
-    <link rel="stylesheet" href="index_files/fontawesome-5.14.0/css/all.css"> 
-  </head>
-  <body>
-    <div id="photo"></div>
-    <h1 id="name">Anastasios Stasinopoulos</h1>
-    <nav>
-      <ul>
-        <!--Github -->
-        <li>
-          <a href="https://github.com/stasinopoulos" target="_blank" title="Github">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <!--Twitter -->
-        <li>
-          <a href="https://twitter.com/ancst" target="_blank" title="Twitter">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <!--Linkedin -->
-        <li>
-          <a href="https://www.linkedin.com/in/anastasios-stasinopoulos-9879ba200/" target="_blank" title="Linkedin">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <!--Blog at wordpress.com -->
-        <li>
-          <a href="https://pwnopticon.wordpress.com/" target="_blank" title="Blog">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fab fa-wordpress fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <!-- Bitbucket -->
-        <li>
-          <a href="https://bitbucket.org/stasinopoulos" target="_blank" title="Bitbucket">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fab fa-bitbucket fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <!--E-Mail -->
-        <li>
-          <a href="mailto:a.stasinopoulos@protonmail.com" target="_blank" title="Email">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>  
-        <!--PGP Key -->
-        <li>
-          <a href="index_files/pgp/a.stasinopoulos_pgp.asc" target="_blank" title="PGP">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-key fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <h5 id="bio">
-          <em>"Builder n' breaker seduced by the dark side"</em>
-        </h5>
-      </ul>
-    </nav>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anastasios Stasinopoulos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anastasios Stasinopoulos - security researcher, builder of commix.">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --panel: #15171c;
+      --border: #24262d;
+      --text: #e8e8ea;
+      --muted: #9a9ca3;
+      --accent: #e0483c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    header.hero {
+      padding: 72px 0 40px;
+      text-align: center;
+    }
+    #photo {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: url('https://avatars3.githubusercontent.com/u/5289251?s=460') no-repeat center;
+      background-size: cover;
+      border: 2px solid var(--border);
+    }
+    h1#name {
+      margin: 0 0 8px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    #bio {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 400;
+      font-style: italic;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #2e3038;
+      color: var(--accent);
+      font-size: 16px;
+      transition: 0.2s;
+    }
+    nav ul li a:hover {
+      color: #fff;
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    section { padding: 36px 0; }
+    section h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-weight: 600;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 24px;
+    }
+    .section-head h2 { margin: 0; }
+    .section-head .topic-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #2e3038;
+      color: var(--accent);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .projects { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .card .card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .card h3 { margin: 0; font-size: 16px; font-weight: 600; }
+    .card p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .card .links { display: flex; gap: 14px; font-size: 13px; }
+    .card .links a { color: var(--accent); }
+    .card .links a:hover { text-decoration: underline; }
+
+    .cve-list { display: flex; flex-direction: column; gap: 14px; }
+    .cve {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .cve .cve-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .cve .cve-id {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-weight: 600;
+      color: #fff;
+      font-size: 15px;
+    }
+    .cve .cve-id a { color: var(--accent); }
+    .cve .cve-date { color: var(--muted); font-size: 13px; }
+    .cve p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    .pub-list { display: flex; flex-direction: column; gap: 14px; }
+    .pub {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .pub h3 { margin: 0 0 4px; font-size: 15px; font-weight: 600; color: #fff; }
+    .pub .pub-venue { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+    .pub .pub-link { font-size: 13px; color: var(--accent); }
+    .pub .pub-link:hover { text-decoration: underline; }
+
+    footer {
+      padding: 32px 0 56px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div id="photo"></div>
+      <h1 id="name">Anastasios Stasinopoulos</h1>
+      <p id="bio">"Builder n' breaker seduced by the dark side"</p>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://twitter.com/ancst" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-x-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/anastasios-stasinopoulos-9879ba200/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://pwnopticon.wordpress.com/" target="_blank" rel="noopener noreferrer" title="Blog"><i class="fab fa-wordpress"></i></a></li>
+          <li><a href="https://bitbucket.org/stasinopoulos" target="_blank" rel="noopener noreferrer" title="Bitbucket"><i class="fab fa-bitbucket"></i></a></li>
+          <li><a href="mailto:a.stasinopoulos@protonmail.com" title="Email"><i class="fa fa-envelope"></i></a></li>
+          <li><a href="index_files/pgp/a.stasinopoulos_pgp.asc" target="_blank" title="PGP Key"><i class="fa fa-key"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="projects">
+      <div class="section-head">
+        <i class="fa-solid fa-screwdriver-wrench topic-icon" aria-hidden="true"></i>
+        <h2>Active Projects</h2>
+      </div>
+      <div class="projects">
+        <div class="card" style="grid-column: 1 / -1;">
+          <div class="card-head"><h3>commix</h3></div>
+          <p>A shell is the only proof that counts. Commix proves command injection by exploiting it - detection through post-exploitation, plus a REST API for driving it from anywhere.</p>
+          <div class="links">
+            <a href="https://github.com/commixproject/commix" target="_blank" rel="noopener noreferrer">Source</a>
+            <a href="https://commixproject.com" target="_blank" rel="noopener noreferrer">Project site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cves">
+      <div class="section-head">
+        <i class="fa-solid fa-bug topic-icon" aria-hidden="true"></i>
+        <h2>CVEs</h2>
+      </div>
+      <div class="cve-list">
+        <div class="cve">
+          <div class="cve-top">
+            <span class="cve-id"><a href="https://www.cve.org/CVERecord?id=CVE-2024-27315" target="_blank" rel="noopener noreferrer">CVE-2024-27315</a></span>
+            <span class="cve-date">Feb 2024</span>
+          </div>
+          <p>Apache Superset's (before 3.0.4, from 3.1.0 before 3.1.1) error handling can be manipulated in order to allow unauthorized data retrieval from the backend database.</p>
+        </div>
+        <div class="cve">
+          <div class="cve-top">
+            <span class="cve-id"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27581" target="_blank" rel="noopener noreferrer">CVE-2021-27581</a></span>
+            <span class="cve-date">Jan 2021</span>
+          </div>
+          <p>The Blog module in Kentico CMS 5.5 R2 build 5.5.3996 allows SQL injection via the tagname parameter.</p>
+        </div>
+        <div class="cve">
+          <div class="cve-top">
+            <span class="cve-id"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26124" target="_blank" rel="noopener noreferrer">CVE-2020-26124</a></span>
+            <span class="cve-date">Jan 2020</span>
+          </div>
+          <p>openmediavault before 4.1.36 and 5.x before 5.5.12 allows authenticated PHP code injection attacks, via the sortfield POST parameter of rpc.php, because json_encode_safe is not used in config/databasebackend.inc. Successful exploitation allows arbitrary command execution on the underlying operating system as root.</p>
+        </div>
+        <div class="cve">
+          <div class="cve-top">
+            <span class="cve-id"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7351" target="_blank" rel="noopener noreferrer">CVE-2020-7351</a></span>
+            <span class="cve-date">Jan 2020</span>
+          </div>
+          <p>An OS Command Injection vulnerability in the endpoint_devicemap.php component of Fonality Trixbox Community Edition allows an attacker to execute commands on the underlying operating system as the "asterisk" user. Affects versions 1.2.0 through 2.8.0.4.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <div class="section-head">
+        <i class="fa-solid fa-microphone topic-icon" aria-hidden="true"></i>
+        <h2>Talks</h2>
+      </div>
+      <div class="pub-list">
+        <div class="pub">
+          <h3>Commix: Detecting and exploiting command injection flaws</h3>
+          <p class="pub-venue">Black Hat Europe - Amsterdam, Netherlands</p>
+          <a class="pub-link" href="http://cgi.di.uoa.gr/~xenakis/Published/61-BlackHatEU-2015/eu-15-Stasinopoulos-Commix-Detecting-And-Exploiting-Command-Injection-Flaws-wp.pdf" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>Perform effective command injection attacks like Mr.Robot</h3>
+          <p class="pub-venue">Security BSides - Athens, Greece</p>
+          <a class="pub-link" href="https://www.dropbox.com/s/fn9mux31x2ak6sm/BSidesAth16_Perform_Effective_Command_Injection_Attacks_Like_Mr.Robot_Final.pdf" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>Your enemies know your ADSL router's weaknesses... Do you?</h3>
+          <p class="pub-venue">Hackerspace Sectalk - Athens, Greece</p>
+          <a class="pub-link" href="https://www.dropbox.com/scl/fi/pusmvhry5xw9nxxid06gy/sectalk_hsgr_adsl_ancst.pdf?rlkey=mvil5ab8rixrzey17patiqljl&dl=0" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>Hackademic Challenges Project</h3>
+          <p class="pub-venue">OWASP Summit - Portugal, Lisbon</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <i class="fa-solid fa-book topic-icon" aria-hidden="true"></i>
+        <h2>Publications</h2>
+      </div>
+      <div class="pub-list">
+        <div class="pub">
+          <h3>Commix: automating evaluation and exploitation of command injection vulnerabilities in Web applications</h3>
+          <p class="pub-venue">Springer - International Journal of Information Security</p>
+          <a class="pub-link" href="https://link.springer.com/article/10.1007/s10207-018-0399-z" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>Bypassing XSS Auditor: Taking advantage of badly written PHP code</h3>
+          <p class="pub-venue">IEEE International Symposium on Signal Processing and Information Technology (ISSPIT)</p>
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/7300602" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>A framework for teaching network security in academic environments</h3>
+          <p class="pub-venue">Information Management &amp; Computer Security</p>
+          <a class="pub-link" href="https://www.academia.edu/28259330/A_framework_for_teaching_network_security_in_academic_environments" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+        <div class="pub">
+          <h3>The weakest link on the network: Exploiting ADSL routers to perform cyber-attacks</h3>
+          <p class="pub-venue">IEEE International Symposium on Signal Processing and Information Technology</p>
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/6781868" target="_blank" rel="noopener noreferrer">Show publication &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; Anastasios Stasinopoulos
+    </footer>
+  </div>
+</body>
 </html>
